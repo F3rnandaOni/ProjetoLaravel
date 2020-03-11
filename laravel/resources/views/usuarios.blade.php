@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -144,12 +145,12 @@
            <td>{{ $user->name }}</td>
            <td>{{ $user->email }}</td>
            <td>{{ date('d/m/Y', strtotime($user->created_at)) }}</td>
-           <td><a href="editar/{{ $user->id }}" id='editar' title='Editar'></a></td>
+           <td><a href='editar/{{ $user->id}}' id='editar' title='Editar'></a></td>
            <td>
               <form action="delete/{{ $user->id }}" method="post">
-                  @csrf
+                    @csrf
 
-                  @method("delete")
+                    @method("delete")
 
                   <input id="deletar" type="submit" value="" title='Deletar'>
               </form>
